@@ -10,7 +10,7 @@ from tensorflow.keras.models import Model
 import tensorflow as tf
 
 # URL de l'image de Pikachu
-url_pikachu = "mettre l'url de l'imag" 
+url_pikachu = r'https://github.com/anisayari/Youtube-apprendre-le-deeplearning-avec-tensorflow/blob/master/%234%20-%20CNN/pikachu.png?raw=true' 
 resp = requests.get(url_pikachu, stream=True).raw
 image_array_pikachu = np.asarray(bytearray(resp.read()), dtype="uint8")
 print(f'Shape of the image {image_array_pikachu.shape}')
