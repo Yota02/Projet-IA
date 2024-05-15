@@ -203,11 +203,12 @@ for name in ['pikachu','rondoudou']:
             print(f'{i+1}nd Pooling')
             display_image_filtered(name,model,f'max_pooling2d_{num+i-1}',image)
             print('-----------------------------------------------------')
-
+"""
 from google.colab import files
 #if there is a bug please be sure pikachu and rondoudou filters are finished to be displayed. If so just relaunch this cell ;)
 !zip -r /content/results_pikachu.zip /content/results_pikachu
 !zip -r /content/results_rondoudou.zip /content/results_rondoudou
+"""
 
 files.download("/content/results_pikachu.zip")
 files.download("/content/results_rondoudou.zip")

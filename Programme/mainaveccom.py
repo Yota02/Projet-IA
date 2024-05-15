@@ -6,6 +6,7 @@ import matplotlib.image as mpimg
 import sys
 import datetime
 from tensorflow import keras
+from tensorflow.keras import layers
 from tensorflow.keras.models import Model
 import tensorflow as tf
 
@@ -21,7 +22,7 @@ image_pikachu = cv2.imdecode(image_array_pikachu, cv2.IMREAD_COLOR)
 # Affichage de l'image avec Matplotlib
 plt.axis('off')
 plt.imshow(cv2.cvtColor(image_pikachu, cv2.COLOR_BGR2RGB)) # Conversion de BGR à RGB
-plt.show()
+#plt.show()
 
 # Redimensionnement de l'image
 res = cv2.resize(image_pikachu , dsize=(40,40), interpolation=cv2.INTER_CUBIC)
@@ -35,7 +36,7 @@ res = cv2.threshold(res, 127, 255, cv2.THRESH_BINARY)[1]
 # Affichage de l'image binarisée
 plt.imshow(cv2.cvtColor(res, cv2.COLOR_BGR2RGB))
 plt.axis('off')
-plt.show()
+#plt.show()
 
 # Conversion de l'image en noir et blanc
 img_bw = cv2.imdecode(image_array_pikachu, cv2.IMREAD_GRAYSCALE)
@@ -60,11 +61,11 @@ data_dir = tf.keras.utils.get_file(
     "https://github.com/anisayari/Youtube-apprendre-le-deeplearning-avec-tensorflow/blob/master/%234%20-%20CNN/dataset.zip?raw=true",
     extract=False)
 
-import zipfile
-with zipfile.ZipFile(data_dir, 'r') as zip_ref:
-    zip_ref.extractall('/content/datasets')
+#import zipfile
+#with zipfile.ZipFile(data_dir, 'r') as zip_ref:
+    #zip_ref.extractall('/content/datasets')
 
-data_dir = pathlib.Path('/content/datasets/dataset')
+data_dir = pathlib.Path('datasets/dataset')
 print(data_dir)
 print(os.path.abspath(data_dir))
 
