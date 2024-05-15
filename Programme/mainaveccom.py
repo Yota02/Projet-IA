@@ -108,6 +108,7 @@ for images, labels in train_data.take(1):
     plt.title(class_names[labels[i]])
     plt.axis("off")
 
+layers=tf.keras.layers
 
 # Définition du modèle CNN
 num_classes = 2
