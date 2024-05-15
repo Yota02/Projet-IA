@@ -6,7 +6,6 @@ import matplotlib.image as mpimg
 import sys
 import datetime
 from tensorflow import keras
-from tensorflow.keras import layers
 from tensorflow.keras.models import Model
 import tensorflow as tf
 
@@ -108,6 +107,7 @@ for images, labels in train_data.take(1):
     plt.imshow(images[i].numpy().astype("uint8"))
     plt.title(class_names[labels[i]])
     plt.axis("off")
+
 
 # Définition du modèle CNN
 num_classes = 2
